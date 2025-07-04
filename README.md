@@ -1,11 +1,4 @@
-# Limaluz
-Es un codigo de Limelight para FTC
+## Welcome to the Offical Pedro Pathing Quickstart!  
 
-# TODO: PONER PREZI
-
-Limaluz = limelight en español xd
-
-# USAR EN CASO DE EMERGENCIA
-
-https://www.youtube.com/watch?v=IHRZDPQ-_l8
-
+Follow the steps on our [website](https://pedropathing.com/) to tune and setup!  
+Feel Free to reach out on the [Offical Pedro Pathing Discord Server](https://discord.gg/2GfC4qBP5s)!
