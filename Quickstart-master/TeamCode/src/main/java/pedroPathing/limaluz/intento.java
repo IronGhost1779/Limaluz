@@ -9,6 +9,13 @@ import static com.pedropathing.follower.FollowerConstants.rightFrontMotorName;
 import static com.pedropathing.follower.FollowerConstants.rightRearMotorDirection;
 import static com.pedropathing.follower.FollowerConstants.rightRearMotorName;
 
+
+import com.pedropathing.geometry.Pose;
+import com.pedropathing.geometry.path.PathChain;
+import com.pedropathing.geometry.path.line.PointLine;
+import com.pedropathing.localization.Follower;
+
+
 import com.pedropathing.util.Constants;
 import com.qualcomm.hardware.limelightvision.LLResult;
 import com.qualcomm.hardware.limelightvision.Limelight3A;
@@ -96,17 +103,29 @@ public class Intento extends LinearOpMode {
             }
 
 
-
-
-
-
             double kp = 0.02;
             double control = kp*error_ll;
+
+            /*
 
             leftFront.setPower(-0.5*control);
             leftRear.setPower(0.5*control);
             rightFront.setPower(-0.5*control);
             rightRear.setPower(0.5*control);
+
+            */
+
+            // drive.setDrivePower(new Pose2d(0, 0.5, 0));
+
+            Pose start = new Pose(0, 0, 0);
+            Pose end   = new Pose(30, 0, 0);
+
+            PathChain path = follower.pathBuilder()
+                    .addPath(new PointLine(start.vec(), end.vec()))
+                    .setLinearHeadingInterpolation(start.heading, end.heading)
+                    .build();
+
+
 
 
         }
